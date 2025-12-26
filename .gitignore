@@ -45,7 +45,3 @@ yarn-error.log*
 *.parquet
 *.pkl
 
-# Optional: Hide CSVs if they are huge. 
-# If 'articles.csv' is <50MB, you can keep it. 
-# If it's >100MB, uncomment the line below:
-# *.csv
