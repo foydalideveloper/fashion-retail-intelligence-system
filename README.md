@@ -67,40 +67,17 @@ graph TD
     UI -->|JSON/HTTP| API[FastAPI Backend]
     
     subgraph "Inference Orchestration Layer"
-        API -->|Sales Data| TS[Forecasting Engine (TFT)]
+        API -->|Sales Data| TS["Forecasting Engine (TFT)"]
         API -->|Text Query| RAG[Hybrid RAG Engine]
         API -->|Image Upload| CV[Visual Search Engine]
         API -->|Transactions| AD[Anomaly Engine]
     end
     
     subgraph "Model Artifacts & Storage"
-        TS -->|Weights| CKPT[TFT Model .ckpt]
+        TS -->|Weights| CKPT["TFT Model .ckpt"]
         RAG -->|Vector Index| FAISS[FAISS Index]
         RAG -->|Inference| Groq[Groq Llama-3 API]
         CV -->|Embeddings| CLIP[OpenAI CLIP]
     end
- Installation
-Prerequisites
-Python 3.10+
-Node.js 18+
-Groq API Key (Free)
-1. Backend
-code
-Bash
-cd fashion-retail-backend
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-pip install "numpy<2" "scikit-learn==1.2.2" # Binary compatibility fixes
-uvicorn app.main:app
-2. Frontend
-code
-Bash
-cd fashion-retail-frontend/fashion-retail-frontend
-npm install
-npm run dev
- Engineering Challenges Solved
-Mac Silicon Support: Resolved OpenMP (OMP: Error #15) and PyTorch conflicts by implementing a Lazy Loading Singleton Pattern, ensuring heavy models only load on demand.
-Dependency Hell: Manually aligned Scikit-Learn and NumPy versions to ensure the pickled TFT model artifacts (trained on Linux) could run on local macOS hardware without Segmentation Faults.
-Author: Shakhzod Karimov
-License: MIT
+
+
