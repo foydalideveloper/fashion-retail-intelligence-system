@@ -1,0 +1,5 @@
+# Tell GitHub to ignore the frontend folder for language stats
+fashion-retail-frontend/** linguist-vendored
+
+# Force it to recognize Python as the main language
+*.py linguist-detectable=true
