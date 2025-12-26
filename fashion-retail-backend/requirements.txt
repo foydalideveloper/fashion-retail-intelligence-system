@@ -1,0 +1,15 @@
+#fashion-retail-backend/requirements.txt
+fastapi
+uvicorn
+pandas
+numpy
+torch
+pytorch-lightning
+pytorch-forecasting
+faiss-cpu
+ftfy
+regex
+tqdm
+git+https://github.com/openai/CLIP.git
+python-multipart
+pyarrow
