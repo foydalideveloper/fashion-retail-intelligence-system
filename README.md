@@ -1,4 +1,5 @@
 # 🛍️ FRIS: Fashion Retail Intelligence System
+# Author:  Karimov Shakhzod
 
 ![PyTorch](https://img.shields.io/badge/AI-PyTorch_Forecasting-EE4C2C?style=flat&logo=pytorch)
 ![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?style=flat&logo=fastapi)
@@ -57,6 +58,24 @@ The raw dataset (3.5GB CSV) was too large for standard RAM.
 *   **Hyperparameters:** Optimized Learning Rate, Attention Heads (4), and Hidden Sizes (64) to balance model complexity with inference speed.
 *   **Validation:** Used a time-based split (Train on past, Validate on future) to prevent data leakage.
 
+
+###  Installation
+     Prerequisites
+*    Python 3.10+
+*    Node.js 18+
+*    Groq API Key (Free)
+###  1. Backend
+    cd fashion-retail-backend
+    python -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements.txt
+    pip install "numpy<2" "scikit-learn==1.2.2" # Binary compatibility fixes
+    uvicorn app.main:app
+###  2. Frontend
+   cd fashion-retail-frontend/fashion-retail-frontend
+   npm install
+   npm run dev
+    
 ---
 
 ##  Technical Architecture
